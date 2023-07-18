@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Front controller
  *
@@ -35,6 +36,8 @@ $router->add('account', ['controller' => 'User', 'action' => 'account', 'private
 $router->add('product', ['controller' => 'Product', 'action' => 'index', 'private' => true]);
 $router->add('product/{id:\d+}', ['controller' => 'Product', 'action' => 'show']);
 $router->add('{controller}/{action}');
+$router->add('politiqueCookies', ['controller' => 'Politics', 'action' => 'index']);
+
 
 /*
  * Gestion des erreurs dans le routing
@@ -42,7 +45,7 @@ $router->add('{controller}/{action}');
 try {
     $router->dispatch($_SERVER['QUERY_STRING']);
 } catch (Exception $e) {
-    switch($e->getMessage()){
+    switch ($e->getMessage()) {
         case 'You must be logged in':
             header('Location: /login');
             break;
