@@ -19,7 +19,13 @@ WORKDIR /var/www/html
 COPY --from=composer:latest /usr/bin/composer /usr/local/bin/composer
 ENV COMPOSER_ALLOW_SUPERUSER=1
 COPY composer.json .
-RUN composer install    
+RUN composer install
+
+# Install PHPUnit
+RUN apt-get update && apt-get install -y wget
+RUN wget https://phar.phpunit.de/phpunit.phar && \
+    chmod +x phpunit.phar && \
+    mv phpunit.phar /usr/local/bin/phpunit
 
 COPY . .
 
