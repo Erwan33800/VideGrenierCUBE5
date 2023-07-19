@@ -15,8 +15,10 @@ clone_branch() {
   echo "Le clonage de la branche $source_branch vers la branche $target_branch est terminé."
 }
 
+vendor/bin/phpunit tests
 # Cloner et monter depuis develop vers preprod
-clone_branch test-staging test-preprod10
+clone_branch develop preprod
 
+vendor/bin/phpunit tests
 # Cloner et monter depuis preprod vers master
-clone_branch test-preprod10 test-master10
+clone_branch preprod master
