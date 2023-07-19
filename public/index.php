@@ -5,7 +5,6 @@
  *
  * PHP version 7.0
  */
-
 session_start();
 
 /**
@@ -13,6 +12,10 @@ session_start();
  */
 require dirname(__DIR__) . '/vendor/autoload.php';
 
+// Config
+define("ROOT", realpath(dirname(__FILE__) . "/../") . "/");
+define("APP_ROOT", ROOT . "App/");
+define("APP_CONFIG_FILE", APP_ROOT . "ConfigEnv.php");
 
 /**
  * Error and Exception handling

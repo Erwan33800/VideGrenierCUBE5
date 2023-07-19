@@ -1,0 +1,80 @@
+[18-Jul-2023 12:47:02 UTC] Uncaught exception: 'Error' with message 'Class "Core\Config" not found'
+Stack trace: #0 /var/www/html/App/Models/Articles.php(23): Core\Model::getDB()
+#1 /var/www/html/App/Controllers/Api.php(25): App\Models\Articles::getAll('')
+#2 [internal function]: App\Controllers\Api->ProductsAction()
+#3 /var/www/html/Core/Controller.php(48): call_user_func_array(Array, Array)
+#4 /var/www/html/Core/Router.php(126): Core\Controller->__call('products', Array)
+#5 /var/www/html/public/index.php(46): Core\Router->dispatch('api/products')
+#6 {main}
+Thrown in '/var/www/html/Core/Model.php' on line 28
+[18-Jul-2023 12:47:10 UTC] Uncaught exception: 'Error' with message 'Class "Core\Config" not found'
+Stack trace: #0 /var/www/html/App/Models/User.php(36): Core\Model::getDB()
+#1 /var/www/html/App/Controllers/User.php(106): App\Models\User::getByLogin('rafael+lol@yali...')
+#2 /var/www/html/App/Controllers/User.php(32): App\Controllers\User->login(Array)
+#3 [internal function]: App\Controllers\User->loginAction()
+#4 /var/www/html/Core/Controller.php(48): call_user_func_array(Array, Array)
+#5 /var/www/html/Core/Router.php(126): Core\Controller->__call('login', Array)
+#6 /var/www/html/public/index.php(46): Core\Router->dispatch('login')
+#7 {main}
+Thrown in '/var/www/html/Core/Model.php' on line 28
+[18-Jul-2023 12:47:31 UTC] Uncaught exception: 'Error' with message 'Class "Core\Config" not found'
+Stack trace: #0 /var/www/html/App/Models/User.php(36): Core\Model::getDB()
+#1 /var/www/html/App/Controllers/User.php(106): App\Models\User::getByLogin('rafael+lol@yali...')
+#2 /var/www/html/App/Controllers/User.php(32): App\Controllers\User->login(Array)
+#3 [internal function]: App\Controllers\User->loginAction()
+#4 /var/www/html/Core/Controller.php(48): call_user_func_array(Array, Array)
+#5 /var/www/html/Core/Router.php(126): Core\Controller->__call('login', Array)
+#6 /var/www/html/public/index.php(46): Core\Router->dispatch('login')
+#7 {main}
+Thrown in '/var/www/html/Core/Model.php' on line 28
+[18-Jul-2023 12:47:59 UTC] Uncaught exception: 'Error' with message 'Class "Core\Config" not found'
+Stack trace: #0 /var/www/html/App/Models/User.php(20): Core\Model::getDB()
+#1 /var/www/html/App/Controllers/User.php(87): App\Models\User::createUser(Array)
+#2 /var/www/html/App/Controllers/User.php(55): App\Controllers\User->register(Array)
+#3 [internal function]: App\Controllers\User->registerAction()
+#4 /var/www/html/Core/Controller.php(48): call_user_func_array(Array, Array)
+#5 /var/www/html/Core/Router.php(126): Core\Controller->__call('register', Array)
+#6 /var/www/html/public/index.php(46): Core\Router->dispatch('register')
+#7 {main}
+Thrown in '/var/www/html/Core/Model.php' on line 28
+[18-Jul-2023 12:53:23 UTC] Uncaught exception: 'Error' with message 'Call to a member function query() on null'
+Stack trace: #0 /var/www/html/App/Controllers/Api.php(25): App\Models\Articles::getAll('')
+#1 [internal function]: App\Controllers\Api->ProductsAction()
+#2 /var/www/html/Core/Controller.php(48): call_user_func_array(Array, Array)
+#3 /var/www/html/Core/Router.php(126): Core\Controller->__call('products', Array)
+#4 /var/www/html/public/index.php(46): Core\Router->dispatch('api/products')
+#5 {main}
+Thrown in '/var/www/html/App/Models/Articles.php' on line 38
+[18-Jul-2023 12:53:59 UTC] Uncaught exception: 'Error' with message 'Call to a member function prepare() on null'
+Stack trace: #0 /var/www/html/App/Controllers/User.php(106): App\Models\User::getByLogin('rafael+lol@yali...')
+#1 /var/www/html/App/Controllers/User.php(32): App\Controllers\User->login(Array)
+#2 [internal function]: App\Controllers\User->loginAction()
+#3 /var/www/html/Core/Controller.php(48): call_user_func_array(Array, Array)
+#4 /var/www/html/Core/Router.php(126): Core\Controller->__call('login', Array)
+#5 /var/www/html/public/index.php(46): Core\Router->dispatch('login')
+#6 {main}
+Thrown in '/var/www/html/App/Models/User.php' on line 38
+[18-Jul-2023 12:57:50 UTC] Uncaught exception: 'Error' with message 'Call to a member function query() on null'
+Stack trace: #0 /var/www/html/App/Controllers/Api.php(25): App\Models\Articles::getAll('')
+#1 [internal function]: App\Controllers\Api->ProductsAction()
+#2 /var/www/html/Core/Controller.php(48): call_user_func_array(Array, Array)
+#3 /var/www/html/Core/Router.php(126): Core\Controller->__call('products', Array)
+#4 /var/www/html/public/index.php(46): Core\Router->dispatch('api/products')
+#5 {main}
+Thrown in '/var/www/html/App/Models/Articles.php' on line 38
+[18-Jul-2023 18:40:01 UTC] Uncaught exception: 'Error' with message 'Call to a member function query() on null'
+Stack trace: #0 /var/www/html/App/Controllers/Api.php(25): App\Models\Articles::getAll('')
+#1 [internal function]: App\Controllers\Api->ProductsAction()
+#2 /var/www/html/Core/Controller.php(48): call_user_func_array(Array, Array)
+#3 /var/www/html/Core/Router.php(126): Core\Controller->__call('products', Array)
+#4 /var/www/html/public/index.php(46): Core\Router->dispatch('api/products')
+#5 {main}
+Thrown in '/var/www/html/App/Models/Articles.php' on line 38
+[18-Jul-2023 18:40:29 UTC] Uncaught exception: 'Error' with message 'Call to a member function query() on null'
+Stack trace: #0 /var/www/html/App/Controllers/Api.php(25): App\Models\Articles::getAll('')
+#1 [internal function]: App\Controllers\Api->ProductsAction()
+#2 /var/www/html/Core/Controller.php(48): call_user_func_array(Array, Array)
+#3 /var/www/html/Core/Router.php(126): Core\Controller->__call('products', Array)
+#4 /var/www/html/public/index.php(46): Core\Router->dispatch('api/products')
+#5 {main}
+Thrown in '/var/www/html/App/Models/Articles.php' on line 38

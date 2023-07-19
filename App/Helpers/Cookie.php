@@ -2,51 +2,59 @@
 
 namespace App\Helpers;
 
+/**
+ * Cookie:
+ *
+ * @author Andrew Dyer <andrewdyer@outlook.com>
+ * @since 1.0.1
+ */
 class Cookie
 {
+
     /**
-     * Crée un cookie
-     *
-     * @param string $name
-     * @param string $value
-     * @param integer $expire
+     * Delete:
+     * @access public
+     * @param string $key
      * @return void
+     * @since 1.0.1
      */
-    public static function set(string $name, string $value, int $expire)
-    {
-        setcookie($name, $value, time() + $expire, '/');
+    public static function delete($key) {
+        self::put($key, "", time() - 1);
     }
 
     /**
-     * Récupère un cookie
-     *
-     * @param string $name
-     * @return string
-     */
-    public static function get(string $name): string
-    {
-        return $_COOKIE[$name];
-    }
-
-    /**
-     * Supprime un cookie
-     *
-     * @param string $name
-     * @return void
-     */
-    public static function delete(string $name)
-    {
-        setcookie($name, '', time() - 3600, '/');
-    }
-
-    /**
-     * Vérifie si un cookie existe
-     *
-     * @param string $name
+     * Exists:
+     * @access public
+     * @param string $key
      * @return boolean
+     * @since 1.0.1
      */
-    public static function exists(string $name): bool
-    {
-        return isset($_COOKIE[$name]);
+    public static function exists($key) {
+        return isset($_COOKIE[$key]);
     }
+
+    /**
+     * Get: Returns the value of a specific key of the COOKIE super-global
+     * @access public
+     * @param string $key
+     * @return string
+     * @since 1.0.1
+     */
+    public static function get($key) {
+        return $_COOKIE[$key];
+    }
+
+    /**
+     * Put:
+     * @access public
+     * @param string $key
+     * @param string $value
+     * @param integer $expiry
+     * @return boolean
+     * @since 1.0.1
+     */
+    public static function put($key, $value, $expiry) {
+        return setcookie($key, $value, time() + $expiry, "/");
+    }
+
 }
